@@ -10,4 +10,9 @@ abstract class Unit {
 	int exp;
 	boolean party;
 	
+	
+	@Override
+	public String toString() {
+		return "";
+	}
 }
