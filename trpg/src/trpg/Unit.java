@@ -2,12 +2,14 @@ package trpg;
 
 abstract class Unit {
 	String name;
-	int level;
-	int hp;
+	int level = 1;
+	int exp;
 	int maxhp;
+	int hp;
 	int att;
 	int def;
-	int exp;
+	int speed;
+	
 	boolean party;
 	
 	

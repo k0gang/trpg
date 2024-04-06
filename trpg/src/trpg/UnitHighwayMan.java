@@ -2,12 +2,12 @@ package trpg;
 
 public class UnitHighwayMan extends Unit {
 
-	UnitHighwayMan(){
-		name = "Dismas";
+	UnitHighwayMan(String name){
+		this.name = name;
 		maxhp = 23;
 		hp = maxhp;
 		att = 10;
-		def = 0;
+		speed = 
 	}
 	
 	// 스킬 
