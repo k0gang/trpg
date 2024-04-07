@@ -8,23 +8,31 @@ public class Guild {
 	Unit[] partyList;
 
 	void setGuild() {
-		guildList.add(new Player().dismas());
-		guildList.add(new Player().Reynauld());
+		guildList.add(new Player().UnitHighwayMan());
+		guildList.add(new Player().UnitCrusader());
+		guildList.add(new Player().UnitAbomination());
+		guildList.add(new Player().UnitGraveRobber());
+		guildList.add(new Player().UnitHoundMaster());
+		guildList.add(new Player().UnitJester());
+		guildList.add(new Player().UnitLeper());
+		guildList.add(new Player().UnitPlagueDoctor());
+		guildList.add(new Player().UnitVestal());
 		// ...
 
-		for (int i = 0; i < PARTY_SIZE; i++)
-			guildList.get(i).party = true;
+//		for (int i = 0; i < guildList.size(); i++)
+//			guildList.get(i).party = true;
 
 		partyList = new Unit[PARTY_SIZE];
 
-		int n = 0;
-		for (int i = 0; i < guildList.size(); i++)
-			if (guildList.get(i).party == true)
-				partyList[n++] = guildList.get(i);
+//		int n = 0;
+//		for (int i = 0; i < guildList.size(); i++)
+//			if (guildList.get(i).party == true)
+//				partyList[n++] = guildList.get(i);
 	}
 
 	public void updateParty() {
 		// 파티 재정의
+		partyList = new Unit[PARTY_SIZE];
 		int n = 0;
 		for (int i = 0; i < guildList.size(); i++)
 			if (guildList.get(i).party)
@@ -34,14 +42,16 @@ public class Guild {
 	public void printAllUnitStatus() {
 		System.out.println("=========용병 목록========");
 		for (int i = 0; i < guildList.size(); i++) {
-			System.out.print("[" + i + 1 + "]번");
+			System.out.print("[" + (i + 1) + "]번");
 			System.out.print(" [이름 : " + guildList.get(i).name + "]");
 			System.out.print(" [레벨 : " + guildList.get(i).level + "]");
 			System.out.print(" [체력 : " + guildList.get(i).hp);
 			System.out.println(" / " + guildList.get(i).maxhp + "]");
 			System.out.print("[공격력 : " + guildList.get(i).att + "]");
 			System.out.print(" [방어력 : " + guildList.get(i).def + "]");
+			System.out.print(" [속도 : " + guildList.get(i).speed + "]");
 			System.out.println(" [파티중 : " + guildList.get(i).party + "]");
+			System.out.println();
 		}
 		System.out.println("=======================");
 	}
@@ -49,14 +59,18 @@ public class Guild {
 	public void printPartyList() {
 		System.out.println("==========파티 목록=========");
 		for (int i = 0; i < partyList.length; i++) {
-			System.out.print("[" + i + 1 + "]번");
-			System.out.print(" [이름 : " + partyList[i].name + "]");
-			System.out.print(" [레벨 : " + partyList[i].level + "]");
-			System.out.print(" [체력 : " + partyList[i].hp);
-			System.out.println(" / " + partyList[i].maxhp + "]");
-			System.out.print("[공격력 : " + partyList[i].att + "]");
-			System.out.print(" [방어력 : " + partyList[i].def + "]");
-			System.out.println(" [파티중 : " + partyList[i].party + "]");
+			if (partyList[i] != null) {
+				System.out.print("[" + (i + 1) + "]번");
+				System.out.print(" [이름 : " + partyList[i].name + "]");
+				System.out.print(" [레벨 : " + partyList[i].level + "]");
+				System.out.print(" [체력 : " + partyList[i].hp);
+				System.out.println(" / " + partyList[i].maxhp + "]");
+				System.out.print("[공격력 : " + partyList[i].att + "]");
+				System.out.print(" [방어력 : " + partyList[i].def + "]");
+				System.out.println(" [파티중 : " + partyList[i].party + "]");
+			} else {
+				System.out.println((i + 1) + "번 자리 고용 가능");
+			}
 		}
 		System.out.println("=========================");
 	}
@@ -64,8 +78,8 @@ public class Guild {
 	public void guildMenu() {
 		while (true) {
 			System.out.println("==== 길드 ====");
-			System.out.println("[1.길드목록] [2.파티추가] [3.파티원 제외]");
-			System.out.println("[4.파티현황] [5.파티원 정보] [0.뒤로가기]");
+			System.out.println("[1.길드목록]\t[2.파티추가]\t[3.파티원 제외]");
+			System.out.println("[4.파티현황]\t[5.파티원 정보]\t[0.뒤로가기]");
 			int sel = GameManager.sc.nextInt();
 
 			if (sel == 1)
@@ -76,7 +90,7 @@ public class Guild {
 				fireUnit();
 			else if (sel == 4)
 				printPartyList();
-			else if(sel == 0)
+			else if (sel == 0)
 				return;
 		}
 	}
@@ -95,7 +109,7 @@ public class Guild {
 		guildList.get(sel).party = true;
 
 		System.out.println("[" + guildList.get(sel).name + "가 파티에 합류합니다.]");
-		
+
 		updateParty();
 	}
 
@@ -107,7 +121,7 @@ public class Guild {
 
 		System.out.println("[" + partyList[sel].name + "가 파티에서 제외되었습니다.]");
 		partyList[sel].party = false;
-		
+
 		updateParty();
 	}
 

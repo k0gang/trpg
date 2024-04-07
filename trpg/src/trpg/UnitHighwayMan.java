@@ -7,7 +7,7 @@ public class UnitHighwayMan extends Unit {
 		maxhp = 23;
 		hp = maxhp;
 		att = 10;
-		speed = 
+		speed = 5;
 	}
 	
 	// 스킬 

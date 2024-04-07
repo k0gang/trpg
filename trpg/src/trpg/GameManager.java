@@ -17,17 +17,16 @@ public class GameManager {
 	Map<String, Stage> stageList = new HashMap<String, Stage>();
 	
 	GameManager(){
-		stageList.put("TITLE", new StageTitle());
-		stageList.put("LOBBY", new StageLobby());
-//		stageList.put("BATTLE", new StageBattle());
-		stageList.put(curStage, null);
-		stageList.put(curStage, null);
 		
-		nextStage = "TITLE";
 	}
 	
 	void init() {
+		stageList.put("TITLE", new StageTitle());
+		stageList.put("LOBBY", new StageLobby());
+		stageList.put("SETTING", new StageSetting());
+//		stageList.put("BATTLE", new StageBattle());
 		
+		nextStage = "TITLE";
 	}
 	
 	boolean stageChange() {

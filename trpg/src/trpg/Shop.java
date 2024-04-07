@@ -23,6 +23,7 @@ public class Shop {
 
 	public void shopMenu() {
 		while (true) {
+			System.out.println(Player.money + "원 보유");
 			System.out.println("=========상점=========");
 			System.out.println("[1.소모품 구매] [2] [0.뒤로가기]");
 			int sel = GameManager.sc.nextInt();
@@ -35,6 +36,7 @@ public class Shop {
 
 	public void buyItem() {
 		printItemList();
+		System.out.println("구매하실 상품 번호 입력");
 		int sel = GameManager.sc.nextInt() - 1;
 		System.out.print("구매하실 개수 : ");
 		int ea = GameManager.sc.nextInt();
@@ -69,7 +71,7 @@ public class Shop {
 	public void printItemList() {
 		System.out.println("==========아이템 목록=========");
 		for (int i = 0; i < itemList.size(); i++) {
-			System.out.print("[" + i + 1 + "번] [");
+			System.out.print("[" + (i + 1) + "번] [");
 			System.out.println(itemList.get(i).name + " : " + itemList.get(i).price + "원]");
 		}
 		System.out.println("==========================");
