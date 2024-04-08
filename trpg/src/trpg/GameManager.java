@@ -24,7 +24,7 @@ public class GameManager {
 		stageList.put("TITLE", new StageTitle());
 		stageList.put("LOBBY", new StageLobby());
 		stageList.put("SETTING", new StageSetting());
-//		stageList.put("BATTLE", new StageBattle());
+		stageList.put("BATTLE", new StageBattle());
 		
 		nextStage = "TITLE";
 	}
