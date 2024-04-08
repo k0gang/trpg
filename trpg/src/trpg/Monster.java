@@ -25,4 +25,44 @@ public  class Monster extends Unit{
 		return cultist;
 	}
 	
+	public Unit MonsterCollector() {
+		Unit collector = new MonsterCollector();
+		return collector;
+	}
+	
+	public Unit MonsterFanatic() {
+		Unit fanatic = new MonsterFanatic();
+		return fanatic;
+	}
+	
+	public Unit MonsterGargoyle() {
+		Unit gargoyle = new MonsterGargoyle();
+		return gargoyle;
+	}
+	
+	public Unit MonsterGhoul() {
+		Unit ghoul = new MonsterGhoul();
+		return ghoul;
+	}
+	
+	public Unit MonsterPliskin() {
+		Unit pliskin = new MonsterPliskin();
+		return pliskin;
+	}
+	
+	public Unit MonsterShambler() {
+		Unit shambler = new MonsterShambler();
+		return shambler;
+	}
+	
+	public Unit MonsterSkeleton() {
+		Unit skeleton = new MonsterSkeleton();
+		return skeleton;
+	}
+	
+	public Unit MonsterWebber() {
+		Unit webber = new MonsterWebber();
+		return webber;
+	}
+	
 }
