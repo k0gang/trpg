@@ -80,3 +80,7 @@ public class Player extends Unit {
 	}
 
 }
+
+interface hero{
+	
+}
