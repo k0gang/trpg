@@ -8,13 +8,6 @@
 
 이미 존재하는 용병들중 선택,고용하여 진행
 
-> 난이도
->
-* 광명 (Radiant)
-* 가장 어두움 (Darkest)
-* 칠흑 (Stygian)
-* 혈월 (Bloodmoon)
-
 > 용병
 >
 * 노상강도 (HighwayMan : Diamas)
@@ -47,40 +40,14 @@
 > 능력치
 >
 * 최대체력(maxhp)
-* 회피(dodge)
 * 방어도(protection)
 * 속도(speed)
-* 치명타(critical)
 * 피해량(damage)
-* 기상확률(virtue chance)
-* 저항력(Resist)
-
-> 상태이상
->
-* 기절(stun)
-* 약화(debuff)
-* 출혈(bleed)
-* 죽음의문턱(Death's Door)
-* 죽음의일격(Deathblow)
-* 기벽(Quirk)
-
-> 이벤트
->
-* 함정(trap)
-* 캠핑(camping)
-* 상자
 
 > 보급품
 >
 * 식량 (Provisions)
-* 삽 (Shovel)
-* 해독제 (Antivenom)
 * 붕대(Bandage)
-* 약초(Herbs)
-* 열쇠 (Key)
-* 성수(HolyWater)
-* 횟불(Torch)
-* 장작(Firewood) <- 캠핑용
 
 >플레이
 >
@@ -88,9 +55,3 @@
 * 출정
 * 인벤토리
 * 파일
-
-> 전리품
->
-* 금화
-* 장신구?
-* 
