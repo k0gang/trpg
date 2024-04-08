@@ -1,6 +1,6 @@
 package trpg;
 
-public class UnitVestal extends Unit{
+public class UnitVestal extends Unit implements hero{
 
 	UnitVestal(String name){
 		this.name = name;

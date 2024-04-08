@@ -1,6 +1,6 @@
 package trpg;
 
-public class UnitCrusader extends Unit{
+public class UnitCrusader extends Unit implements hero{
 
 	UnitCrusader(String name){
 		this.name = name;

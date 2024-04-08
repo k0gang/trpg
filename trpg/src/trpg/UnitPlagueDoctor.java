@@ -1,6 +1,6 @@
 package trpg;
 
-public class UnitPlagueDoctor extends Unit{
+public class UnitPlagueDoctor extends Unit implements hero{
 	
 	UnitPlagueDoctor(String name){
 		this.name = name;

@@ -1,6 +1,6 @@
 package trpg;
 
-public class UnitHoundMaster extends Unit {
+public class UnitHoundMaster extends Unit implements hero{
 
 	UnitHoundMaster(String name) {
 		this.name = name;

@@ -1,6 +1,6 @@
 package trpg;
 
-public class UnitJester extends Unit{
+public class UnitJester extends Unit implements hero{
 
 	UnitJester(String name){
 		this.name = name;

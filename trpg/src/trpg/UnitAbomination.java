@@ -1,6 +1,6 @@
 package trpg;
 
-public class UnitAbomination extends Unit {
+public class UnitAbomination extends Unit implements hero{
 
 	UnitAbomination(String name){
 		this.name = name;

@@ -1,6 +1,6 @@
 package trpg;
 
-public class UnitHighwayMan extends Unit {
+public class UnitHighwayMan extends Unit implements hero{
 
 	UnitHighwayMan(String name){
 		this.name = name;

@@ -1,6 +1,6 @@
 package trpg;
 
-public class UnitLeper extends Unit {
+public class UnitLeper extends Unit implements hero{
 	
 	UnitLeper(String name){
 		this.name = name;

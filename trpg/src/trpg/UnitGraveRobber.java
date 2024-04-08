@@ -1,6 +1,6 @@
 package trpg;
 
-public class UnitGraveRobber extends Unit{
+public class UnitGraveRobber extends Unit implements hero{
 	
 	UnitGraveRobber(String name){
 		this.name = name;
